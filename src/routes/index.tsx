@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { LoadingScreen } from "@/components/birthday/LoadingScreen";
 import { OpeningScreen } from "@/components/birthday/OpeningScreen";
-import { ReasonsConstellation } from "@/components/birthday/ReasonsConstellation";
+import { WishCake } from "@/components/birthday/WishCake";
 import { MessagesSection } from "@/components/birthday/MessagesSection";
 import { InteractiveSurprises } from "@/components/birthday/InteractiveSurprises";
 import { MemoryTimeline } from "@/components/birthday/MemoryTimeline";
@@ -67,7 +67,7 @@ function Index() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <ReasonsConstellation />
+            <WishCake />
             <MessagesSection />
             <InteractiveSurprises name={NAME} />
             <MemoryTimeline />
