@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { LoadingScreen } from "@/components/birthday/LoadingScreen";
 import { OpeningScreen } from "@/components/birthday/OpeningScreen";
-import { Countdown } from "@/components/birthday/Countdown";
+import { ReasonsConstellation } from "@/components/birthday/ReasonsConstellation";
 import { MessagesSection } from "@/components/birthday/MessagesSection";
 import { InteractiveSurprises } from "@/components/birthday/InteractiveSurprises";
 import { MemoryTimeline } from "@/components/birthday/MemoryTimeline";
@@ -13,8 +13,6 @@ import { StarField } from "@/components/birthday/Particles";
 
 // Personalize here ↓
 const NAME = "You";
-const BIRTHDAY_MONTH = 12; // 1-12
-const BIRTHDAY_DAY = 25;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -69,7 +67,7 @@ function Index() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           >
-            <Countdown month={BIRTHDAY_MONTH} day={BIRTHDAY_DAY} />
+            <ReasonsConstellation />
             <MessagesSection />
             <InteractiveSurprises name={NAME} />
             <MemoryTimeline />
