@@ -39,7 +39,7 @@ export function WishCake() {
   };
 
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center px-6 py-24 text-center">
+    <section className="relative flex min-h-screen flex-col items-center justify-center px-4 py-20 text-center sm:px-6 sm:py-24">
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export function WishCake() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1.2, delay: 0.2 }}
-        className="font-display mt-4 text-4xl italic sm:text-6xl"
+        className="font-display mt-4 text-3xl italic sm:text-5xl md:text-6xl"
       >
         blow out the <span className="text-gradient-gold">candles</span>
       </motion.h2>
@@ -62,9 +62,9 @@ export function WishCake() {
         tap each candle — every flame holds a little wish for you.
       </p>
 
-      <div className="relative mx-auto mt-14 w-full max-w-md">
+      <div className="relative mx-auto mt-12 w-full max-w-md sm:mt-14">
         {/* Candles */}
-        <div className="relative flex items-end justify-center gap-4 pb-2">
+        <div className="relative flex items-end justify-center gap-3 pb-2 sm:gap-4">
           {candles.map((i) => {
             const isOut = blown.has(i);
             return (
@@ -118,21 +118,21 @@ export function WishCake() {
         {/* Cake */}
         <div className="relative">
           <div
-            className="mx-auto h-10 w-72 rounded-t-xl"
+            className="mx-auto h-9 w-full max-w-[18rem] rounded-t-xl sm:h-10"
             style={{
               background:
                 "linear-gradient(180deg, oklch(0.92 0.05 30) 0%, oklch(0.82 0.08 30) 100%)",
             }}
           />
           <div
-            className="mx-auto h-20 w-80 rounded-xl"
+            className="mx-auto h-20 w-full max-w-[20rem] rounded-xl"
             style={{
               background:
                 "linear-gradient(180deg, oklch(0.78 0.1 20) 0%, oklch(0.6 0.12 18) 100%)",
               boxShadow: "0 20px 60px -20px oklch(0.6 0.12 18 / 0.6)",
             }}
           />
-          <div className="mx-auto -mt-2 h-3 w-80 rounded-b-xl bg-black/30" />
+          <div className="mx-auto -mt-2 h-3 w-full max-w-[20rem] rounded-b-xl bg-black/30" />
         </div>
 
         {/* Wish bubble */}

@@ -37,18 +37,18 @@ const MESSAGES = [
 
 export function MessagesSection() {
   return (
-    <section className="relative px-6 py-32">
+    <section className="relative px-4 py-20 sm:px-6 sm:py-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="font-display mx-auto max-w-2xl text-center text-3xl italic text-foreground/85 sm:text-5xl"
+        className="font-display mx-auto max-w-2xl text-center text-2xl italic text-foreground/85 sm:text-4xl md:text-5xl"
       >
         a few things i wanted to <span className="text-gradient-rose">whisper</span> to you
       </motion.h2>
 
-      <div className="mx-auto mt-20 flex max-w-2xl flex-col gap-10">
+      <div className="mx-auto mt-12 flex max-w-2xl flex-col gap-6 sm:mt-20 sm:gap-10">
         {MESSAGES.map((m, i) => (
           <MessageLine key={i} text={m} index={i} />
         ))}
@@ -66,9 +66,9 @@ function MessageLine({ text, index }: { text: string; index: number }) {
       viewport={{ once: true, amount: 0.6 }}
       transition={{ duration: 1, delay: 0.1 }}
       onViewportEnter={() => setSeen(true)}
-      className={`glass rounded-3xl p-7 sm:p-9 ${index % 2 ? "sm:ml-12" : "sm:mr-12"}`}
+      className={`glass rounded-3xl p-5 sm:p-9 ${index % 2 ? "sm:ml-12" : "sm:mr-12"}`}
     >
-      <p className="font-display text-xl leading-relaxed text-foreground/90 sm:text-2xl">
+      <p className="font-display text-lg leading-relaxed text-foreground/90 sm:text-2xl">
         <Typewriter text={text} start={seen} />
       </p>
     </motion.div>

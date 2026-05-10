@@ -4,7 +4,7 @@ import { Particles } from "./Particles";
 
 export function OpeningScreen({ onOpen, name }: { onOpen: () => void; name: string }) {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 text-center sm:px-6">
       <Particles count={22} variant="sparkles" />
 
       <motion.p
@@ -17,7 +17,7 @@ export function OpeningScreen({ onOpen, name }: { onOpen: () => void; name: stri
       </motion.p>
 
       <motion.h1
-        className="font-display text-5xl leading-[1.05] sm:text-7xl md:text-8xl"
+        className="font-display text-4xl leading-[1.05] sm:text-6xl md:text-8xl"
         initial={{ opacity: 0, y: 24, filter: "blur(12px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 1.6, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -42,7 +42,7 @@ export function OpeningScreen({ onOpen, name }: { onOpen: () => void; name: stri
         transition={{ duration: 1, delay: 2.8 }}
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.97 }}
-        className="glass glow-rose group relative mt-12 overflow-hidden rounded-full px-8 py-4 text-sm tracking-wide text-foreground"
+        className="glass glow-rose group relative mt-12 overflow-hidden rounded-full px-6 py-4 text-xs tracking-wide text-foreground sm:px-8 sm:text-sm"
       >
         <span className="relative z-10 flex items-center gap-2">
           <Sparkles className="h-4 w-4 text-gold" />
