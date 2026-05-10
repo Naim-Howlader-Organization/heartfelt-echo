@@ -153,7 +153,12 @@
   }
 
   body {
-    background: radial-gradient(ellipse at top, oklch(0.18 0.06 320) 0%, oklch(0.08 0.02 290) 55%, oklch(0.05 0.02 280) 100%);
+    background: radial-gradient(
+      ellipse at top,
+      oklch(0.18 0.06 320) 0%,
+      oklch(0.08 0.02 290) 55%,
+      oklch(0.05 0.02 280) 100%
+    );
     background-attachment: fixed;
     color: var(--color-foreground);
     font-family: var(--font-sans);
@@ -167,20 +172,31 @@
 }
 
 @layer utilities {
-  .font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
-  .font-script  { font-family: var(--font-script); }
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  .font-script {
+    font-family: var(--font-script);
+  }
 
   .glass {
     background: linear-gradient(135deg, oklch(1 0 0 / 0.08), oklch(1 0 0 / 0.02));
     backdrop-filter: blur(20px) saturate(140%);
     -webkit-backdrop-filter: blur(20px) saturate(140%);
     border: 1px solid oklch(1 0 0 / 0.12);
-    box-shadow: 0 20px 60px -20px oklch(0 0 0 / 0.5),
-                inset 0 1px 0 oklch(1 0 0 / 0.08);
+    box-shadow:
+      0 20px 60px -20px oklch(0 0 0 / 0.5),
+      inset 0 1px 0 oklch(1 0 0 / 0.08);
   }
 
   .text-gradient-rose {
-    background: linear-gradient(135deg, oklch(0.92 0.08 25), oklch(0.78 0.16 15), oklch(0.85 0.12 85));
+    background: linear-gradient(
+      135deg,
+      oklch(0.92 0.08 25),
+      oklch(0.78 0.16 15),
+      oklch(0.85 0.12 85)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -194,8 +210,9 @@
   }
 
   .glow-rose {
-    box-shadow: 0 0 40px oklch(0.78 0.16 18 / 0.45),
-                0 0 80px oklch(0.78 0.16 18 / 0.25);
+    box-shadow:
+      0 0 40px oklch(0.78 0.16 18 / 0.45),
+      0 0 80px oklch(0.78 0.16 18 / 0.25);
   }
 
   .shimmer {
@@ -205,27 +222,57 @@
   }
 
   @keyframes shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
   }
 
   @keyframes float-up {
-    0% { transform: translateY(100vh) translateX(0) scale(0.6); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-10vh) translateX(var(--drift, 40px)) scale(1); opacity: 0; }
+    0% {
+      transform: translateY(100vh) translateX(0) scale(0.6);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-10vh) translateX(var(--drift, 40px)) scale(1);
+      opacity: 0;
+    }
   }
 
   @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.2); }
+    0%,
+    100% {
+      opacity: 0.2;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
   }
 
   @keyframes pulse-soft {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.04);
+    }
   }
 
-  .scrollbar-hide::-webkit-scrollbar { display: none; }
-  .scrollbar-hide { scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
 }

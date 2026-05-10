@@ -1,6 +1,6 @@
+import confetti from "canvas-confetti";
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import confetti from "canvas-confetti";
 import { Particles } from "./Particles";
 
 export function Finale({ name }: { name: string }) {
@@ -16,7 +16,7 @@ export function Finale({ name }: { name: string }) {
           burst();
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.4 },
     );
     obs.observe(ref.current);
     return () => obs.disconnect();
@@ -67,9 +67,9 @@ export function Finale({ name }: { name: string }) {
         transition={{ duration: 1.4, delay: 1.2 }}
         className="mt-10 max-w-xl text-balance text-base leading-relaxed text-foreground/75 sm:text-lg"
       >
-        thank you for being light in a world that sometimes forgets to glow.
-        for laughing at my bad jokes, for showing up softly, for simply being.
-        may this year be gentle, generous, and yours.
+        thank you for being light in a world that sometimes forgets to glow. for laughing at my bad
+        jokes, for showing up softly, for simply being. may this year be gentle, generous, and
+        yours.
       </motion.p>
 
       <motion.button
@@ -95,9 +95,9 @@ export function Finale({ name }: { name: string }) {
         no matter what happens, never forget how special you are to me.
       </motion.p>
 
-      <p className="mt-10 text-[10px] uppercase tracking-[0.4em] text-foreground/40">
+      {/* <p className="mt-10 text-[10px] uppercase tracking-[0.4em] text-foreground/40">
         — made with love
-      </p>
+      </p> */}
     </section>
   );
 }

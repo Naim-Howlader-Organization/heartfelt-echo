@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import { Music2, VolumeX } from "lucide-react";
 import { motion } from "framer-motion";
+import { Music2, VolumeX } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 // Soft ambient loop — hot-link friendly host (SoundHelix is CORS/hotlink-friendly).
 // Pixabay's /download/ URLs return 403 when embedded on third-party domains.
-const TRACK_URL =
-  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3";
+const TRACK_URL = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3";
 
 export function MusicToggle() {
   const ref = useRef<HTMLAudioElement | null>(null);

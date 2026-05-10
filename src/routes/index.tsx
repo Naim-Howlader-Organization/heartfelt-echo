@@ -1,18 +1,17 @@
+import { Finale } from "@/components/birthday/Finale";
+import { InteractiveSurprises } from "@/components/birthday/InteractiveSurprises";
+import { LoadingScreen } from "@/components/birthday/LoadingScreen";
+import { MemoryTimeline } from "@/components/birthday/MemoryTimeline";
+import { MessagesSection } from "@/components/birthday/MessagesSection";
+import { OpeningScreen } from "@/components/birthday/OpeningScreen";
+import { StarField } from "@/components/birthday/Particles";
+import { WishCake } from "@/components/birthday/WishCake";
 import { createFileRoute } from "@tanstack/react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { LoadingScreen } from "@/components/birthday/LoadingScreen";
-import { OpeningScreen } from "@/components/birthday/OpeningScreen";
-import { WishCake } from "@/components/birthday/WishCake";
-import { MessagesSection } from "@/components/birthday/MessagesSection";
-import { InteractiveSurprises } from "@/components/birthday/InteractiveSurprises";
-import { MemoryTimeline } from "@/components/birthday/MemoryTimeline";
-import { Finale } from "@/components/birthday/Finale";
-import { MusicToggle } from "@/components/birthday/MusicToggle";
-import { StarField } from "@/components/birthday/Particles";
 
 // Personalize here ↓
-const NAME = "You";
+const NAME = "Roshni";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,8 +19,7 @@ export const Route = createFileRoute("/")({
       { title: `A Birthday Surprise for ${NAME}` },
       {
         name: "description",
-        content:
-          "A cinematic, interactive birthday experience — made with love. Open to begin the journey.",
+        content: "A cinematic, interactive birthday experience. Open to begin the journey.",
       },
       { property: "og:title", content: `A Birthday Surprise for ${NAME}` },
       {
@@ -44,12 +42,10 @@ function Index() {
   }, []);
 
   return (
-    <main className="relative min-h-screen text-foreground">
+    <main className="relative min-h-screen text-foreground overflow-x-hidden">
       <StarField />
 
       <AnimatePresence>{loading && <LoadingScreen />}</AnimatePresence>
-
-      {!loading && <MusicToggle />}
 
       <AnimatePresence mode="wait">
         {!opened ? (

@@ -1,10 +1,26 @@
 import { motion } from "framer-motion";
 
 const MOMENTS = [
-  { year: "then", title: "the day we first crossed paths", note: "i didn't know it yet, but my world had just gotten softer." },
-  { year: "later", title: "all the small ordinary days", note: "the tea-talks, the silly laughs, the silences that weren't awkward at all." },
-  { year: "this year", title: "every time you were brave", note: "i watched you carry storms and still bloom. that takes magic." },
-  { year: "tomorrow", title: "all the chapters yet unwritten", note: "i can't wait to see who you become next. take me along, please." },
+  {
+    year: "then",
+    title: "the day our paths crossed",
+    note: "some people arrive quietly and still manage to change the feeling of everything.",
+  },
+  {
+    year: "later",
+    title: "all the in-between moments",
+    note: "the random talks, shared laughs, and little memories that stayed longer than expected.",
+  },
+  {
+    year: "this year",
+    title: "the way you kept going",
+    note: "even on difficult days, you still carried light with you. not everyone can do that.",
+  },
+  {
+    year: "tomorrow",
+    title: "everything still waiting ahead",
+    note: "whatever comes next, i know it’ll be beautiful with you in the story.",
+  },
 ];
 
 export function MemoryTimeline() {

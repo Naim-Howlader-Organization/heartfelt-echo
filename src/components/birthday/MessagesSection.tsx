@@ -29,10 +29,10 @@ function Typewriter({ text, start, speed = 38 }: { text: string; start: boolean;
 }
 
 const MESSAGES = [
-  "you make ordinary days feel like poetry.",
-  "you are one of the most precious people in my life.",
-  "the world is softer because you exist in it.",
-  "i hope this year brings you endless reasons to smile.",
+  "you make every moment more memorable just by being there.",
+  "life feels better with a friend like you around.",
+  "you bring good vibes wherever you go.",
+  "hope this year gives you lots of happiness and amazing memories.",
 ];
 
 export function MessagesSection() {

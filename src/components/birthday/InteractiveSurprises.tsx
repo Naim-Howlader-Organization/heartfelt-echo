@@ -1,7 +1,7 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { Gift, Heart, Sparkles } from "lucide-react";
 import confetti from "canvas-confetti";
+import { AnimatePresence, motion } from "framer-motion";
+import { Gift, Heart, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 /* ---------- Gift Box ---------- */
 function GiftBoxCard({ name }: { name: string }) {
@@ -39,7 +39,7 @@ function GiftBoxCard({ name }: { name: string }) {
               className="text-center"
             >
               <p className="font-script text-3xl text-gradient-rose">happy birthday, {name}</p>
-              <p className="mt-2 text-sm text-foreground/60">consider this a tiny hug.</p>
+              {/* <p className="mt-2 text-sm text-foreground/60">consider this a tiny hug.</p> */}
             </motion.div>
           )}
         </AnimatePresence>
@@ -86,7 +86,14 @@ function HoldToUnlock() {
           className="relative h-24 w-24 select-none rounded-full"
         >
           <svg viewBox="0 0 100 100" className="h-full w-full -rotate-90">
-            <circle cx="50" cy="50" r="44" stroke="oklch(1 0 0 / 0.1)" strokeWidth="4" fill="none" />
+            <circle
+              cx="50"
+              cy="50"
+              r="44"
+              stroke="oklch(1 0 0 / 0.1)"
+              strokeWidth="4"
+              fill="none"
+            />
             <circle
               cx="50"
               cy="50"
@@ -111,7 +118,7 @@ function HoldToUnlock() {
         </button>
         <p className="text-sm italic text-foreground/70">
           {done
-            ? "“you are loved, more than words can hold.”"
+            ? "“you are appreciated more than you probably realize.”"
             : "press & hold the heart…"}
         </p>
       </div>
@@ -166,7 +173,9 @@ function ScratchCard() {
       <div className="relative mx-auto h-48 w-full overflow-hidden rounded-2xl">
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-rose/20 to-gold/20 p-4 text-center">
           <Sparkles className="mb-2 h-6 w-6 text-gold" />
-          <p className="font-display text-xl italic text-gradient-gold">you are my favourite kind of magic.</p>
+          <p className="font-display text-xl italic text-gradient-gold">
+            you’re the kind of person who makes everything brighter
+          </p>
         </div>
         <canvas
           ref={canvasRef}
@@ -215,7 +224,9 @@ function Balloons() {
                 });
               }}
               animate={isPopped ? { scale: 0, opacity: 0 } : { y: [0, -10, 0] }}
-              transition={isPopped ? { duration: 0.3 } : { duration: 3 + i * 0.3, repeat: Infinity }}
+              transition={
+                isPopped ? { duration: 0.3 } : { duration: 3 + i * 0.3, repeat: Infinity }
+              }
               className="absolute bottom-2"
               style={{ left: `${b.left}%` }}
             >
