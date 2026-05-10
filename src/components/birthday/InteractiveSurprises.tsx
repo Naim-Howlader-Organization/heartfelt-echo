@@ -259,20 +259,20 @@ function SurpriseCard({ title, children }: { title: string; children: React.Reac
 
 export function InteractiveSurprises({ name }: { name: string }) {
   return (
-    <section className="relative px-6 py-32">
+    <section className="relative px-4 py-20 sm:px-6 sm:py-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="font-display mx-auto max-w-2xl text-center text-3xl italic sm:text-5xl"
+        className="font-display mx-auto max-w-2xl text-center text-2xl italic sm:text-4xl md:text-5xl"
       >
         little <span className="text-gradient-gold">surprises</span>, made for you
       </motion.h2>
       <p className="mx-auto mt-4 max-w-md text-center text-sm text-foreground/60">
         tap, hold, scratch, pop — every interaction is a tiny wish.
       </p>
-      <div className="mx-auto mt-16 grid max-w-5xl gap-6 sm:grid-cols-2">
+      <div className="mx-auto mt-10 grid max-w-5xl gap-5 sm:mt-16 sm:gap-6 sm:grid-cols-2">
         <GiftBoxCard name={name} />
         <HoldToUnlock />
         <ScratchCard />

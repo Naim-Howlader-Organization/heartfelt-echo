@@ -9,18 +9,18 @@ const MOMENTS = [
 
 export function MemoryTimeline() {
   return (
-    <section className="relative px-6 py-32">
+    <section className="relative px-4 py-20 sm:px-6 sm:py-32">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="font-display mx-auto max-w-2xl text-center text-3xl italic sm:text-5xl"
+        className="font-display mx-auto max-w-2xl text-center text-2xl italic sm:text-4xl md:text-5xl"
       >
         a small <span className="text-gradient-rose">timeline</span> of you
       </motion.h2>
 
-      <div className="relative mx-auto mt-20 max-w-3xl">
+      <div className="relative mx-auto mt-12 max-w-3xl sm:mt-20">
         <div className="absolute left-4 top-0 h-full w-px bg-gradient-to-b from-transparent via-rose/40 to-transparent sm:left-1/2" />
         {MOMENTS.map((m, i) => (
           <motion.div

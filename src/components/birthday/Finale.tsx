@@ -35,7 +35,7 @@ export function Finale({ name }: { name: string }) {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-32 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 py-20 text-center sm:px-6 sm:py-32"
     >
       <Particles count={26} variant="hearts" />
 
@@ -54,7 +54,7 @@ export function Finale({ name }: { name: string }) {
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         viewport={{ once: true }}
         transition={{ duration: 1.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display mt-6 text-5xl leading-[1.05] sm:text-7xl md:text-8xl"
+        className="font-display mt-6 text-4xl leading-[1.05] sm:text-6xl md:text-8xl"
       >
         <span className="block italic text-foreground/85">Happy Birthday,</span>
         <span className="text-gradient-rose mt-2 block">{name} 🎂</span>
